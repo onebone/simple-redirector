@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	onessentials.CopyFile(path.Join("resources", "redir.ini"), "redir.ini")
+	onessentials.CopyFileIfNotExists(path.Join("resources", "redir.ini"), "redir.ini")
 
 	cfg, err := ini.Load("redir.ini")
 	if err != nil {
